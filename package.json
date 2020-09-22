@@ -4,12 +4,14 @@
   "description": "cljs 연습을 위한 starter",
   "main": "index.js",
   "scripts": {
-    "start": "npx shadow-cljs -d cider/cider-nrepl:0.23.0 watch app"
+    "start": "npx shadow-cljs -d cider/cider-nrepl:0.23.0 watch app",
+    "lint": "clj-kondo --lint src"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "clj-kondo": "^2020.1.13",
     "shadow-cljs": "^2.11.2"
   },
   "dependencies": {

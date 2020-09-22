@@ -1,0 +1,20 @@
+.demo__container {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+}
+
+.demo__input {
+    width: 300px;
+    text-align: center;
+
+    padding: 10px 20px;
+}
+
+.demo__button-wrapper {
+    margin-top: 15px;
+}
