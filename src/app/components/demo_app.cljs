@@ -15,9 +15,10 @@
           :value @input-txt
           :on-change (fn [^js e]
                        (reset! input-txt (-> e .-target .-value)))}]
-        (when (not (nil? @confirm-result)) [:h2 (if @confirm-result
-                                     "확인 되었습니다"
-                                     "취소 되었습니다")])
+        (when (not (nil? @confirm-result)) 
+          [:h2 (if @confirm-result
+                 "확인 되었습니다"
+                 "취소 되었습니다")])
         [:div.demo__button-wrapper 
          [:button.btn
           {:on-click (fn []
