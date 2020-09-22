@@ -14,8 +14,7 @@
 
 (defn- confirm-resolve [res]
   (reset! is-confirm-open?_ false)
-  (put! @confirm-ch res)
-  )
+  (put! @confirm-ch res))
 
 (defn- confirm-ok []
   (confirm-resolve true))
