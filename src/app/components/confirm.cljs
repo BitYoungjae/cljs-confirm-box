@@ -6,7 +6,7 @@
 
 (def ^:private is-confirm-open?_ (r/atom false))
 (def ^:private confirm-msg_ (r/atom ""))
-(def ^:private confirm-ch (atom nil))
+(def ^:private confirm-ch_ (atom nil))
 
 (defn- open-confirm [msg]
   (reset! confirm-msg_ msg)
@@ -14,7 +14,7 @@
 
 (defn- confirm-resolve [res]
   (reset! is-confirm-open?_ false)
-  (put! @confirm-ch res))
+  (put! @confirm-ch_ res))
 
 (defn- confirm-ok []
   (confirm-resolve true))
@@ -29,8 +29,8 @@
   [msg]
   (let [new-ch (chan)]
     (open-confirm msg)
-    (reset! confirm-ch new-ch)
-    @confirm-ch))
+    (reset! confirm-ch_ new-ch)
+    @confirm-ch_))
 
 (defn confirm-box [modal-container-selector]
   (let [modal-container (ocall js/document "querySelector" modal-container-selector)]
