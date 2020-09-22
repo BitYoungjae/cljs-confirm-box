@@ -1,4 +1,4 @@
-# CLJS 연습용 템플릿
+# CLJS Starter
 
 cljs + reagent + re-frame 연습용 starter
 

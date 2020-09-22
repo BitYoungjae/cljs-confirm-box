@@ -1,7 +1,7 @@
 {:source-paths ["src"] ; 소스 경로
 
  :nrepl {:port 8450} ; repl 서버 포트
- :dev-http {3030 "public"} ; public 폴더 내용물들을 7777 포트로 실어 나름
+ :dev-http {3030 "public"} ; dev-server port 3030
 
  :dependencies [[reagent "1.0.0-alpha2"]
                 [re-frame "1.1.1"]
@@ -13,7 +13,7 @@
  :dev-tools {:preloads [re-frisk.preload]}
 
  :builds {:app {:target :browser
-                :modules {:main {:init-fn app.core/init}} ;emit될 자바스크립트 모듈들 :main은 main.js가 될 것이다.
-                ;init-fn은 entry point가 되는 함수를 의미한다. 이 경우 app.core/init를 가르키고 있다.
+                :modules {:main { ; emit될 자바스크립트 모듈들 :main은 main.js가 될 것이다.
+                                 :init-fn app.core/init}} ; init-fn은 entry point가 되는 함수를 의미한다. 이 경우 app.core/init를 가르키고 있다. 
                 :output-dir "public/js" ; 컴파일된 js파일들이 위치할 경로
                 :asset-path "/js"}}} ;핫 코드 리플레이스먼트를 위해 설정했다는데 의미 정확히 모르겠음
