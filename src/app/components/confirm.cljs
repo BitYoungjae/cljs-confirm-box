@@ -25,10 +25,8 @@
 
 (defn show-confirm
   "confirm box를 표시한다.
-   map 형태의 매개변수를 받으며, 아래의 형태를 갖는다.
    
-   (show-confirm {:msg '컨펌박스에 출력할 메시지'
-                  :on-confirm #(컨펌 되었을 때 실행할 함수)})"
+   (show-confirm msg)"
   [msg]
   (let [new-ch (chan)]
     (open-confirm msg)
