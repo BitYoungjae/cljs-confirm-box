@@ -1,6 +1,4 @@
-# CLJS Starter
-
-cljs + reagent + re-frame 연습용 starter
+# CLJS 확인상자
 
 ## 의존성
 
@@ -11,8 +9,6 @@ cljs + reagent + re-frame 연습용 starter
 
 ### cljs
 - reagent 1.0.0-alpha2
-- re-frame 1.1.1
-- re-frisk 1.3.4
 - binaryage/oops 0.7.0
 
 ## 사용법
@@ -20,3 +16,9 @@ cljs + reagent + re-frame 연습용 starter
 ```sh
 npm start
 ```
+
+## 접속
+
+3030 포트로 접속
+
+[http://localhost:3030](http://localhost:3030/)
