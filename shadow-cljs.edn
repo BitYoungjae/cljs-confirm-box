@@ -1,10 +1,16 @@
 {:source-paths ["src"] ; 소스 경로
 
  :nrepl {:port 8450} ; repl 서버 포트
- :dev-http {7777 "public"} ; public 폴더 내용물들을 7777 포트로 실어 나름
+ :dev-http {3030 "public"} ; public 폴더 내용물들을 7777 포트로 실어 나름
 
  :dependencies [[reagent "1.0.0-alpha2"]
-                [re-frame "1.1.1"]] ; 해당 프로젝트의 의존성들
+                [re-frame "1.1.1"]
+                [re-frisk "1.3.4"]
+                [binaryage/oops "0.7.0"]] ; 해당 프로젝트의 의존성들
+ 
+ :compiler-options {:closure-defines {"re_frame.trace.trace_enabled_QMARK_" true}}
+ 
+ :dev-tools {:preloads [re-frisk.preload]}
 
  :builds {:app {:target :browser
                 :modules {:main {:init-fn app.core/init}} ;emit될 자바스크립트 모듈들 :main은 main.js가 될 것이다.
